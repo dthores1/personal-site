@@ -60,6 +60,34 @@ p.lead {
   margin-bottom: 24px;
 }
 
+/* Portrait in hero on small screens only (lg+ uses sidebar image). */
+#about .about-profile-mobile {
+  margin-bottom: 0.35rem;
+}
+
+#about .about-profile-mobile__img {
+  display: inline-block;
+  width: clamp(7.125rem, 36vw, 10.25rem);
+  height: clamp(7.125rem, 36vw, 10.25rem);
+  object-fit: cover;
+  border: 0.5rem solid rgba(39, 52, 73, 0.12);
+}
+
+@media (max-width: 991.98px) {
+  /* Anchor hero to top; drop full-viewport centering so the portrait sits with the name. */
+  #about.resume-section {
+    min-height: auto;
+    align-items: flex-start !important;
+    padding-top: 2.25rem !important;
+    padding-bottom: 3.5rem !important;
+  }
+
+  #about h1 {
+    font-size: clamp(3.5rem, 11vw, 5.25rem);
+    line-height: 1.02;
+  }
+}
+
 .about-bio {
   max-width: 650px;
   margin-bottom: 24px;
