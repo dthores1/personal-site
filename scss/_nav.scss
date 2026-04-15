@@ -1,4 +1,7 @@
 #sideNav {
+  &.bg-primary {
+    background-color: $sidebar-bg !important;
+  }
   .navbar-nav .nav-item .nav-link {
     font-weight: 800;
     letter-spacing: 0.05rem;
@@ -6,7 +9,7 @@
   }
   .navbar-toggler {
     &:focus {
-      outline-color: lighten($primary, 15%);
+      outline-color: rgba(245, 158, 11, 0.45);
     }
   }
 }

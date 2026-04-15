@@ -2,6 +2,23 @@ section.resume-section {
   padding-top: 5rem !important;
   padding-bottom: 5rem !important;
   max-width: 75rem;
+  h2 {
+    margin-bottom: 24px;
+  }
+  & > .w-100 > p {
+    max-width: 650px;
+    margin-bottom: 16px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .resume-content p {
+    max-width: 650px;
+    margin-bottom: 16px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
   .resume-item {
     .resume-content {}
     .resume-date {
@@ -23,5 +40,28 @@ section.resume-section {
   section.resume-section {
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
+  }
+}
+
+#professional-development {
+  .pd-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .pd-sublist {
+    margin: 0;
+    padding-left: 1.25rem;
+    list-style-type: disc;
+    font-size: 0.875rem;
+    font-style: italic;
+    line-height: 1.5;
+    color: $gray-500;
+  }
+
+  /* Font Awesome brand glyph is single-color; use Google blue (multicolor G needs SVG). */
+  .pd-list > li > .fa-li.fab.fa-google {
+    color: #4285f4;
   }
 }

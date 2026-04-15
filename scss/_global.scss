@@ -4,6 +4,8 @@ body {
   @include body-font;
   padding-top: 54px;
   color: $gray-600;
+  background-color: $page-bg;
+  line-height: 1.65;
 }
 @media (min-width: 992px) {
   body {
@@ -22,24 +24,28 @@ h6 {
   font-weight: 700;
   text-transform: uppercase;
   color: $gray-800;
+  letter-spacing: -0.02em;
 }
 
 h1 {
-  font-size: 6rem;
-  line-height: 5.5rem;
+  font-size: 6.5rem;
+  line-height: 6rem;
 }
 
 h2 {
-  font-size: 3.5rem;
+  font-size: 3.75rem;
+  line-height: 1.08;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 2.25rem;
+  line-height: 1.2;
 }
 
 p.lead {
   font-size: 1.15rem;
   font-weight: 400;
+  max-width: 650px;
 }
 
 .subheading {
@@ -47,6 +53,22 @@ p.lead {
   font-weight: 500;
   @include heading-font;
   font-size: 1.5rem;
+  letter-spacing: -0.015em;
+}
+
+#about .subheading {
+  margin-bottom: 24px;
+}
+
+.about-bio {
+  max-width: 650px;
+  margin-bottom: 24px;
+  p {
+    margin-bottom: 16px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .social-icons {
@@ -76,5 +98,27 @@ p.lead {
     &:hover {
       color: $primary;
     }
+  }
+  .list-inline-item i + i {
+    margin-left: 8px;
+  }
+}
+
+#skills {
+  .skills-intro {
+    @include body-font;
+    font-size: 0.9375rem;
+    color: $gray-600;
+    max-width: 650px;
+    margin-bottom: 16px;
+  }
+  .subheading {
+    margin-bottom: 8px;
+  }
+  .skills-intro + .subheading {
+    margin-top: 24px;
+  }
+  .dev-icons + .subheading {
+    margin-top: 32px;
   }
 }

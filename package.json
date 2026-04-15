@@ -1,0 +1,10 @@
+{
+  "name": "personal-site",
+  "private": true,
+  "scripts": {
+    "vendor:fontawesome": "rm -rf vendor/fontawesome-free && mkdir -p vendor/fontawesome-free && cp -R node_modules/@fortawesome/fontawesome-free/css node_modules/@fortawesome/fontawesome-free/webfonts vendor/fontawesome-free/"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^7.2.0"
+  }
+}
