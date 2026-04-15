@@ -69,6 +69,29 @@ p.lead {
   margin-bottom: 24px;
 }
 
+#about .subheading.about-subheading-contact .about-location {
+  color: #adb5bd;
+  font-weight: 400;
+  font-size: 0.88em;
+}
+
+#about .subheading.about-subheading-contact .about-phone {
+  color: #868e96;
+  font-weight: 400;
+}
+
+#about .subheading.about-subheading-contact .about-subheading-sep {
+  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: #ced4da;
+  padding: 0 0.4em;
+  font-weight: 400;
+  font-size: 0.95em;
+}
+
+#about .subheading.about-subheading-contact a {
+  font-weight: 600;
+}
+
 #about .about-profile-mobile {
   margin-bottom: 0.35rem;
 }
