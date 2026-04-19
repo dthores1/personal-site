@@ -1,0 +1,8 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Crawlers do not need to index vendored libraries or build-only assets
+Disallow: /vendor/
+
+Sitemap: https://danthoreson.com/sitemap.xml
