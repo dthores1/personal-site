@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Placeholder draft on information density in UIs — Dan Thoreson.">
+  <meta name="robots" content="index,follow">
+  <link rel="shortcut icon" href="../img/dt-favicon.svg">
+  <title>More Data Doesn’t Help Users — It Hurts Them · Dan Thoreson</title>
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="../css/resume.min.css" rel="stylesheet">
+  <link href="../css/ux-post.min.css" rel="stylesheet">
+</head>
+<body id="page-top" class="ux-post-page">
+  <ux-post-nav></ux-post-nav>
+  <script src="../js/ux-post-nav.js"></script>
+  <main class="ux-post-main">
+    <article class="ux-article">
+      <h1>More Data Doesn’t Help Users — It Hurts Them</h1>
+      <p>Most interfaces don’t suffer from a lack of data. They suffer from <strong>too much of it.</strong></p>
+      <p>There’s a persistent belief in product teams that more information equals more power. If we just add one more column, one more metric, one more filter — users will be able to make better decisions.</p>
+      <p>In reality, the opposite happens.</p>
+      <p>More data doesn’t clarify; it overwhelms.</p>
+
+      <h2>The slow death of clarity</h2>
+      <p>This rarely happens all at once. It happens gradually.</p>
+      <p>It happens gradually.</p> 
+ 
+      <p>
+        A stakeholder asks for one more field.</br>
+        A team adds one more column.</br>
+        Another request comes in — seems reasonable.</br>
+      </p>
+      
+      <p>Individually, each addition is harmless.</p>
+      <p>Together, they create something else entirely — a dense, noisy interface where nothing stands out.</br>
+      <p class="ux-article-punch">Small additions compound into large problems.</p>
+
+
+      <h2>The table problem</h2>
+      <p>You see this most clearly in data grids.</p>
+      <p>What starts as a simple, usable table turns into something much harder to use:</p>
+
+      <ul>
+        <li>more columns get added</li>
+        <li>horizontal scrolling appears</li>
+        <li>key information drifts out of view</li>
+        <li>visual density increases</li>
+      </ul>
+      <p>Eventually, you end up with what feels like a wall of data.</p>
+
+      <h3>A real-world example</h3>
+      <p>Take something familiar: searching for a flight.</p>
+
+      <figure>
+        <img src="../img/ux/Book_Flight_Too_Much_Data.png" alt="Flight search page showing a large number of columns per each result.">
+        <figcaption>Every data point is useful. Together, they become overwhelming.</figcaption>
+      </figure>  
+      
+      <p>Each result shows:</p>
+      <ul>
+        <li>departure and arrival times</li>
+        <li>duration and stops</li>
+        <li>layovers and aircraft type</li>
+        <li>baggage rules and seat details</li>
+        <li>Wi-Fi, emissions, loyalty points</li>
+        <li>pricing and urgency signals</li>
+      </ul>
+        
+      <p>None of this is unnecessary. <strong>But now try scanning 15 of these.</strong></p>
+        
+      <p class="ux-article-punch">A simple decision turns into a spreadsheet exercise.</p>
+
+
+      <h3>The horizontal scroll of doom</h3>
+      <p>Once a table requires side-scrolling, something breaks.</p>
+      <p>The user can no longer see the primary identifier — the thing that gives the row meaning.</p>
+      
+      <p>
+        Store name.</br>
+        Customer.</br>
+        Account.</br>
+      </p>
+      
+      <p>Without that anchor, the rest of the data loses context.</p>
+
+
+      <h3>When everything is visible, nothing is visible</h3>
+      <p>Dense interfaces remove your ability to guide attention.</p>
+      <ul>
+        <li>every cell is filled</li>
+        <li>spacing disappears</li>
+        <li>hierarchy collapses</li>
+      </ul>
+      
+      <p>Whitespace stops being a tool. Everything becomes equally loud.</p>
+      <p>Everything becomes equally loud.</p>
+      <p class="ux-article-punch">If everything is important, nothing is.</p>  
+      
+      
+      <h3>The “wall of text” effect</h3>
+      <p>At a certain point, users stop trying to read.</p>
+      <p>
+        They scan. They skip. Then they disengage.
+      </p>
+      <p>The interface no longer invites interaction — it repels it.</p>
+
+
+      <h2>The illusion of utility</h2>
+      <p>So why does this keep happening?</p>
+      <p>Because more data <strong>feels</strong> useful.</p>
+      <p>There’s a fear of missing something important. A belief that more inputs lead to better decisions.</p>
+      <p>But what actually increases is <strong>processing time.</strong></p>
+      <p>Users spend more energy filtering than deciding.</p>
+      <p class="ux-article-punch">More data increases effort faster than it increases value.</p>      
+
+
+      <h2>What users actually want</h2>
+      <p>Often, users don’t want more data. They want a <strong>clear answer to a question.</strong></p>
+      <p>Take a simple example. A sales rep asks for:</p>
+      <ul>
+        <li>business hours</li>
+        <li>time zone</li>
+      </ul>
+      <p>On the surface, that sounds like a request for more information.</p>
+      
+      <p>
+        But their real need underlies that (and often it's not what they say!). Their real question might be:
+        <div class="indented-quote">“Can I call this business right now?”</div>
+      </p>
+
+      <p>You don’t need two columns to answer that. You need a signal:</p>
+      <ul>
+        <li>Open (green)</li>
+        <li>Closing soon (amber)</li>
+        <li>Closed (red)</li>
+      </ul>
+      
+      <p>...that’s it.</p>
+      <p class="ux-article-punch">Good interfaces are about answering questions, not exposing raw data.</p>
+
+
+      <h2>Signal vs. noise</h2>
+      <p>As you add more data, something subtle happens.</p>
+      <p>The important information doesn’t disappear — it gets drowned out.</p>
+      <p>The signal-to-noise ratio drops. Finding the right piece of information takes longer. Understanding it takes more effort.</p>
+      <p>This is where cognitive load comes in.</p>
+      <p>Every extra column forces the user to:</p>
+      <ul>
+        <li>scan more</li>
+        <li>filter more</li>
+        <li>decide more</li>
+      </ul>
+      <p>That’s energy not spent solving the actual problem.</p>
+
+
+      <h2>The squint test</h2>
+      <p>There’s a simple way to evaluate this.</p>
+      <p>Squint at your interface. If it turns into a uniform gray blur, you’ve lost the battle.</p>
+      <p>There’s no hierarchy, no focal point, no guidance. Just noise.</p>
+
+
+
+      <h2>The role of the designer</h2>
+      <p>The job isn’t to include everything. It’s to decide what matters.</p>
+      <p>There’s a difference between a collection and a curation: A collection shows everything. A curation shows what’s relevant.</p>
+      <p class="ux-article-punch">Designers are curators, not containers.</p>
+      
+
+      <h2>Designing for clarity</h2>
+      <p>There are better ways to handle complexity.</p>
+      
+      <h3>1. Progressive disclosure</h3>
+      <p>Keep the primary view simple. Move secondary data into:</p>
+      <ul>
+        <li>tooltips</li>
+        <li>expandable rows</li>
+        <li>detail panels</li>
+      </ul>
+      <p>Let users pull information when they need it.</p>
+
+      
+      <h3>2. Opinionated defaults</h3>
+      
+      <p>The default view should be focused.</p>
+      
+      <p><strong>Show the 4–6 most actionable pieces of data.</strong> Everything else is optional.</p>
+      
+  
+      <h3>3. Aggregation over fragmentation</h3>
+      
+      <p>Instead of showing multiple related fields, combine them.</p>
+      <p><strong>Replace:</strong></p>
+      <ul>
+        <li>multiple timestamps</li>
+        <li>multiple statuses</li>
+      </ul>
+      <p><strong>With:</strong></p>
+      <ul>
+        <li>a single status</li>
+        <li>a “time since” indicator</li>
+      </ul>
+
+
+      <h3>4. Visual encoding</h3>
+      <p>Don’t rely on raw numbers alone. Use:</p>
+      <ul>
+        <li>color</li>
+        <li>icons</li>
+        <li>small visual cues</li>
+      </ul>
+      <p>So users can understand information at a glance.</p>
+      
+
+      <h3>5. The escape hatch</h3>
+      <p>For power users, provide customization.</p>
+      <p>Let them add columns and rearrange views.</p>
+      <p>But don’t force everyone to live in that complexity by default.</p>
+
+
+      <h2>The courage to simplify</h2>
+      <p>Simple interfaces are not easy to build.</p>
+      <p>They require tradeoffs. They require saying no. They require resisting the 1,001st “small” request.</p>
+      <p>But the alternative is predictable: A product that technically has everything — and practically helps no one.</p>
+      <p class="ux-article-punch">Good UX isn’t about how much you show.  It’s about how little the user has to think.</p>
+    </article>
+  </main>
+  <script src="../js/ux-post-lightbox.js"></script>
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

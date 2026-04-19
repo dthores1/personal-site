@@ -2,9 +2,11 @@
   "name": "personal-site",
   "private": true,
   "scripts": {
+    "build:css": "cleancss -o css/resume.min.css css/resume.css && cleancss -o css/ux-post.min.css css/ux-post.css",
     "vendor:fontawesome": "rm -rf vendor/fontawesome-free && mkdir -p vendor/fontawesome-free && cp -R node_modules/@fortawesome/fontawesome-free/css node_modules/@fortawesome/fontawesome-free/webfonts vendor/fontawesome-free/"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^7.2.0"
+    "@fortawesome/fontawesome-free": "^7.2.0",
+    "clean-css-cli": "^5.6.3"
   }
 }

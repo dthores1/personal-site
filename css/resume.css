@@ -257,7 +257,7 @@ section.resume-section {
 }
 
 section.resume-section h2 {
-  margin-bottom: 24px;
+  margin-bottom: 1rem;
 }
 
 section.resume-section > .w-100 > p {
@@ -336,4 +336,94 @@ a:hover, a:focus, a:active {
 
 #professional-development .pd-list > li > .fa-li.fab.fa-google {
   color: #4285f4;
+}
+
+#ux-thinking .ux-thinking-intro {
+  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.9375rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #868e96;
+  max-width: 650px;
+  line-height: 1.65;
+  margin-bottom: 32px;
+}
+
+#ux-thinking .ux-thinking-preview {
+  display: block;
+  border-left: 4px solid var(--site-color);
+  padding-left: 1.25rem;
+  margin-bottom: 2.5rem;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+#ux-thinking .ux-thinking-preview:last-child {
+  margin-bottom: 0;
+}
+
+#ux-thinking .ux-thinking-preview:hover {
+  transform: translateY(-2px);
+}
+
+#ux-thinking .ux-thinking-preview:focus-visible {
+  outline: 2px solid var(--site-color);
+  outline-offset: 4px;
+}
+
+#ux-thinking .ux-thinking-preview-title {
+  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #343a40;
+  text-transform: none;
+  letter-spacing: normal;
+  margin-bottom: 8px;
+  transition: color 0.15s ease;
+}
+
+#ux-thinking .ux-thinking-preview:hover .ux-thinking-preview-title,
+#ux-thinking .ux-thinking-preview:focus-visible .ux-thinking-preview-title {
+  color: var(--site-color);
+}
+
+#ux-thinking .ux-thinking-preview-text {
+  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: #868e96;
+  max-width: 650px;
+  line-height: 1.65;
+  margin-bottom: 12px;
+}
+
+#ux-thinking .ux-thinking-read-more {
+  display: inline-block;
+  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  color: var(--site-color);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+#ux-thinking .ux-thinking-preview:hover .ux-thinking-read-more,
+#ux-thinking .ux-thinking-preview:focus-visible .ux-thinking-read-more {
+  color: #B45309;
+}
+
+#ux-thinking .ux-thinking-read-more-arrow {
+  display: inline-block;
+  font-weight: 800;
+  transition: transform 0.15s ease;
+}
+
+#ux-thinking .ux-thinking-preview:hover .ux-thinking-read-more-arrow,
+#ux-thinking .ux-thinking-preview:focus-visible .ux-thinking-read-more-arrow {
+  transform: translateX(3px);
 }

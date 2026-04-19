@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Why developer tools often ship with confusing UX — incentives, incentives, and what good looks like.">
+  <meta name="robots" content="index,follow">
+  <link rel="shortcut icon" href="../img/dt-favicon.svg">
+  <title>Why Developer Tools Have Terrible UX · Dan Thoreson</title>
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="../css/resume.min.css" rel="stylesheet">
+  <link href="../css/ux-post.min.css" rel="stylesheet">
+</head>
+<body id="page-top" class="ux-post-page">
+  <ux-post-nav></ux-post-nav>
+  <script src="../js/ux-post-nav.js"></script>
+  <main class="ux-post-main">
+    <article class="ux-article">
+      <h1>Why Developer Tools Have Terrible UX</h1>
+
+      <p>Most developer tools have bad UX.</p>
+      <p>Are the developers who build dev tools just bad at design? No, at least not necessarily. Some of the smartest engineers in the world build these tools &mdash; but <strong>the incentives behind these tools make good UX almost impossible.</strong></p>
+      <p>Despite the talent and brainpower behind these systems, they&apos;re often:</p>
+      <ul>
+        <li>confusing to navigate</li>
+        <li>inconsistent in behavior</li>
+        <li>difficult to learn</li>
+        <li>frustrating to use daily</li>
+      </ul>
+
+      <h2>The problem</h2>
+      <p>When a tool is hard to use, we often blame the user for not reading the documentation thoroughly enough, rather than blaming the interface for failing to guide them.</p>
+      <p>But cognitive load is a zero-sum game. Every ounce of mental energy spent remembering flags or parsing dense dashboards is energy not spent solving real problems.</p>
+      <p>If you&apos;ve ever used modern developer tools, you&apos;ve felt this. You open something expecting to do a simple task &mdash; and instead you&apos;re met with:</p>
+      <ul>
+        <li>unclear entry points</li>
+        <li>competing UI elements</li>
+        <li>multiple ways to do the same thing</li>
+        <li>no obvious &ldquo;starting path&rdquo;</li>
+      </ul>
+      <p>Take something as simple as making an API request. That&apos;s the core job. That&apos;s why you open a tool like Postman. And yet, you&apos;re greeted with:</p>
+      <ul>
+        <li>onboarding widgets</li>
+        <li>AI assistants</li>
+        <li>notifications panels</li>
+        <li>workspace concepts</li>
+      </ul>
+      <p>&hellip;everything except a clear &ldquo;start here.&rdquo;</p>
+      <p class="ux-article-punch">You shouldn&apos;t have to search for the primary action.</p>
+
+      <h2>Why this happens</h2>
+      <p>This is structural, not accidental.</p>
+
+      <h3>1. Builders are not representative users</h3>
+      <p>The people building these tools are:</p>
+      <ul>
+        <li>power users</li>
+        <li>deeply familiar with the system</li>
+        <li>comfortable navigating complexity</li>
+      </ul>
+      <p>They optimize for speed once you already understand everything, rather than clarity for someone just trying to get something done.</p>
+      <p class="ux-article-punch">So the UI reflects <strong>internal mental models, not user workflows.</strong></p>
+
+      <h3>2. &ldquo;Users will figure it out&rdquo;</h3>
+      <p>Developer tools get a free pass.</p>
+      <p>There&apos;s an implicit assumption that:</p>
+      <ul>
+        <li>users will Google it</li>
+        <li>ask in Slack</li>
+        <li>watch a tutorial</li>
+        <li>or just brute-force their way through</li>
+      </ul>
+      <p>That removes pressure to make the interface intuitive. <strong>UX becomes optional.</strong></p>
+
+      <h3>3. No one owns the UX</h3>
+      <p>In many teams:</p>
+      <ul>
+        <li>designers are absent, or too removed</li>
+        <li>engineers are making UX decisions</li>
+        <li>no one is accountable for coherence</li>
+      </ul>
+      <p>The result is predictable:</p>
+      <p class="ux-article-punch">Developer tools end up as locally optimized features but globally inconsistent experiences.</p>
+      <p>Every feature makes sense on its own. Together, they don&apos;t.</p>
+
+      <h3>4. Feature pressure turns tools into dumping grounds</h3>
+      <p>This is the biggest one.</p>
+      <p>Every request becomes:</p>
+      <ul>
+        <li>a new toggle</li>
+        <li>a new tab</li>
+        <li>a new configuration option</li>
+        <li>a new panel</li>
+      </ul>
+      <p>Nothing gets removed. Nothing gets consolidated.</p>
+      <p class="ux-article-punch">Over time, the interface becomes a collection of decisions, not a product.</p>
+
+      <h2>Real-world examples</h2>
+
+      <h3>Postman &mdash; no clear starting point</h3>
+      <p>You open the app to make a request.</p>
+      <p>Instead, you&apos;re dropped into:</p>
+      <ul>
+        <li>a conversational AI prompt</li>
+        <li>a &ldquo;needs your attention&rdquo; panel</li>
+        <li>workspace navigation</li>
+      </ul>
+      <p>Where do you actually go to make a request?</p>
+      <p>The core action is buried under everything else.</p>
+      <figure>
+        <img src="../img/ux/Postman_Bad_UI.png" alt="Postman home screen showing AI prompt, workspace chrome, and activity feed with no prominent New Request action.">
+        <figcaption>Postman’s home page shows everything…except what you need. Its competing surfaces — such as a front-and-center AI agent and an unnecessarily large “notifications” panel — makes the primary job (sending a request) easy to lose. Why not a “Quick Start” or “New Request” entry point?</figcaption>
+      </figure>
+
+      <h3>Jenkins &mdash; debugging as archaeology</h3>
+      <p>Setting up pipelines feels like a scavenger hunt.</p>
+      <p>When something fails:</p>
+      <ul>
+        <li>errors are buried in raw console logs</li>
+        <li>you scroll endlessly</li>
+        <li>you search manually for failure points</li>
+      </ul>
+      <p>The system gives you data, but not clarity.</p>
+
+      <h3>AWS Console &mdash; power without hierarchy</h3>
+      <p>AWS is incredibly powerful. But the console feels like dozens of unrelated tools stitched together.</p>
+      <p>Problems:</p>
+      <ul>
+        <li>inconsistent navigation patterns</li>
+        <li>unclear relationships between services</li>
+        <li>naming that increases cognitive load (CloudWatch vs CloudTrail)</li>
+      </ul>
+      <p>Even experienced engineers get lost. In fact, many eventually abandon the UI entirely in favor of CLI or Terraform.</p>
+      <p>These aren&apos;t necessarily easier, but at least they&apos;re more predictable.</p>
+
+      <h3>Jira &mdash; work about work</h3>
+      <p>Jira is supposed to help teams move faster.</p>
+      <p>Instead, it often feels like:</p>
+      <ul>
+        <li>filling out forms</li>
+        <li>navigating workflows</li>
+        <li>managing states</li>
+      </ul>
+      <p class="ux-article-punch">Developers spend time <strong>maintaining the system instead of doing the work.</strong></p>
+
+      <h2>Why this actually matters</h2>
+      <p>It&apos;s easy to dismiss this as &ldquo;just how dev tools are&rdquo;</p>
+      <p>But the cost is real:</p>
+      <ul>
+        <li>slower development cycles</li>
+        <li>higher onboarding time</li>
+        <li>more mistakes</li>
+        <li>reliance on tribal knowledge</li>
+        <li>frustration that compounds daily</li>
+      </ul>
+      <p class="ux-article-punch">Dev tools are used constantly. Small inefficiencies compound massively over time.</p>
+
+      <h2>What good looks like</h2>
+      <p>Good developer tools don&apos;t try to expose everything.</p>
+      <p>They prioritize:</p>
+      <ul>
+        <li><strong>clear primary actions</strong> &mdash; You always know where to start</li>
+        <li><strong>strong defaults</strong> &mdash; You don&apos;t configure everything upfront</li>
+        <li><strong>progressive complexity</strong> &mdash; Advanced options appear when needed</li>
+        <li><strong>consistent patterns</strong> &mdash; Learning once applies everywhere</li>
+        <li><strong>opinionated design</strong> &mdash; Not every edge case gets first-class UI</li>
+      </ul>
+      <p>Most importantly, good tools optimize for getting something done &mdash; not for exposing every possibility.</p>
+
+      <h2>Final Thoughts</h2>
+      <p>Developer tools don&apos;t have a UX problem because developers don&apos;t care.</p>
+      <p>They have a UX problem because complexity is rewarded and no one is incentivized to say no.</p>
+      <p>Better UX doesn&apos;t come from adding designers; it comes from reducing scope, enforcing priorities, and designing for clarity over power.</p>
+    </article>
+  </main>
+  <script src="../js/ux-post-lightbox.js"></script>
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
