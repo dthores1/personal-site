@@ -282,6 +282,18 @@ body.ux-post-page {
   margin-top: var(--ux-space-xs);
 }
 
+.ux-article-signature {
+  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.9375rem;
+  font-style: italic;
+  font-weight: 400;
+  color: #adb5bd;
+  text-align: right;
+  letter-spacing: 0.02em;
+  margin-top: var(--ux-space-lg);
+  margin-bottom: 0;
+}
+
 /* Subtly transform the image on hover to give visual cue that it's clickable */
 figure img:hover {
   transform: scale(1.01);
