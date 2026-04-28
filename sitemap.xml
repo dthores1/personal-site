@@ -17,6 +17,11 @@
   </url>
 
   <url>
+    <loc>https://danthoreson.com/ux/user-needs.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://danthoreson.com/ux/less-is-more.html</loc>
     <priority>0.8</priority>
   </url>
