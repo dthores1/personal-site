@@ -200,6 +200,37 @@ body.ux-post-page {
   cursor: zoom-in;
 }
 
+.ux-article figure.ux-figure--medium img {
+  width: min(100%, 34rem);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ux-article figure.ux-figure--small img {
+  width: min(100%, 30rem);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ux-article figure.ux-figure-mobile--small img {
+  width: min(100%, 16rem);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ux-article hr.ux-section-divider {
+  width: min(100%, 7rem);
+  margin: calc(var(--ux-space-lg) + 2px) auto calc(var(--ux-space-lg) - 4px);
+  border: 0;
+  border-top: 1px solid rgba(39, 52, 73, 0.12);
+}
+
+.ux-article--lookio figure img {
+  border: 1px solid rgba(39, 52, 73, 0.08);
+  box-shadow: 0 8px 24px rgba(39, 52, 73, 0.08);
+  border-radius: 10px;
+}
+
 .ux-article figure img:focus {
   outline: 2px solid var(--site-color);
   outline-offset: 4px;
@@ -297,4 +328,8 @@ body.ux-post-page {
 /* Subtly transform the image on hover to give visual cue that it's clickable */
 figure img:hover {
   transform: scale(1.01);
+}
+
+.padding-top--small {
+  padding-top: var(--ux-space-sm);
 }

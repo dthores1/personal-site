@@ -427,3 +427,158 @@ a:hover, a:focus, a:active {
 #ux-thinking .ux-thinking-preview:focus-visible .ux-thinking-read-more-arrow {
   transform: translateX(3px);
 }
+
+/* Portfolio */
+#portfolio .portfolio-intro {
+  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.9375rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #868e96;
+  max-width: 650px;
+  line-height: 1.65;
+  margin-bottom: 32px;
+}
+
+#portfolio .portfolio-item {
+  padding: 3rem 0 3.25rem;
+}
+
+#portfolio .portfolio-item:last-child {
+  padding-bottom: 0;
+}
+
+#portfolio .portfolio-section-divider {
+  width: min(100%, 30rem);
+  margin: 0 auto 3rem;
+  border: 0;
+  border-top: 1px solid rgba(39, 52, 73, 0.18);
+}
+
+#portfolio .portfolio-item__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.25rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  #portfolio .portfolio-item__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  #portfolio .portfolio-item--reverse .portfolio-item__content {
+    order: 2;
+  }
+  #portfolio .portfolio-item--reverse .portfolio-item__media {
+    order: 1;
+  }
+}
+
+#portfolio .portfolio-item__title {
+  margin-bottom: 0.25rem;
+}
+
+#portfolio .portfolio-item__subtitle {
+  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #868e96;
+  max-width: 38rem;
+  margin-bottom: 1.25rem;
+}
+
+#portfolio .portfolio-item__content p {
+  max-width: 38rem;
+  margin-bottom: 16px;
+}
+
+#portfolio .portfolio-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.35rem 0 1.5rem;
+}
+
+#portfolio .portfolio-pill {
+  display: inline-flex;
+  align-items: center;
+  height: 1.75rem;
+  padding: 0 0.85rem;
+  border: 1px solid rgba(52, 58, 64, 0.12);
+  border-radius: 999px;
+  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  color: #6c757d;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+#portfolio .portfolio-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.25rem;
+  margin-top: 0.25rem;
+}
+
+#portfolio .portfolio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 0.35rem;
+  transition: transform 0.15s ease, opacity 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+#portfolio .portfolio-btn:focus-visible {
+  outline: 2px solid var(--site-color);
+  outline-offset: 4px;
+}
+
+#portfolio .portfolio-btn--primary {
+  background: var(--site-color);
+  color: #fff;
+  padding: 0.9rem 1.25rem;
+  box-shadow: 0 10px 24px rgba(39, 52, 73, 0.12);
+}
+
+#portfolio .portfolio-btn--primary:hover {
+  background: #B45309;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+#portfolio .portfolio-btn--link {
+  color: #6c757d;
+  padding: 0.9rem 0;
+}
+
+#portfolio .portfolio-btn--link:hover {
+  color: #343a40;
+  transform: translateY(-1px);
+}
+
+#portfolio .portfolio-item__media {
+  display: flex;
+  justify-content: center;
+}
+
+#portfolio .portfolio-item__img {
+  width: min(100%, 720px);
+  height: auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 18px 48px rgba(39, 52, 73, 0.18);
+  background: #fff;
+}
+
+#portfolio .portfolio-item__img--lookio {
+  width: min(100%, 220px);
+}

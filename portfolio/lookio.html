@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Lookio is a mobile app designed to capture better moments by getting your subject's attention at the right time.">
+  <meta name="robots" content="index,follow">
+  <link rel="shortcut icon" href="../img/dt-favicon.svg">
+  <title>Lookio · Portfolio · Dan Thoreson</title>
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="../css/resume.min.css" rel="stylesheet">
+  <link href="../css/ux-post.min.css" rel="stylesheet">
+</head>
+<body id="page-top" class="ux-post-page">
+  <portfolio-post-nav></portfolio-post-nav>
+  <script src="../js/portfolio-post-nav.js"></script>
+  <main class="ux-post-main">
+    <article class="ux-article ux-article--lookio">
+      <h1>Lookio</h1>
+      <p class="ux-article-punch">A mobile app designed to capture better moments by getting your subject&rsquo;s attention at the right time.</p>
+      <blockquote>
+        <p>Anyone who&rsquo;s tried to photograph a dog or a toddler knows the problem &mdash; they look anywhere <em>except</em> the camera the moment you tap the shutter.</p>
+      </blockquote>
+
+      <!-- TODO - Add this once Lookio is live on App Store... -->
+      <!-- <div class="portfolio-actions" style="margin: 1.25rem 0 0;">
+        <a class="portfolio-btn portfolio-btn--primary" href="../index.html#portfolio">Explore Lookio <span aria-hidden="true">&rarr;</span></a>
+      </div> -->
+
+      <figure class="ux-figure-mobile--small">
+        <img src="../img/portfolio/Lookio_Landing_Page.png" alt="Lookio landing and phone mock introducing the camera app concept.">
+      </figure>
+
+      <h2>Overview</h2>
+      <p>Lookio is a mobile camera app designed to help capture better photos of pets and children by using sound to guide attention at the moment of capture.</p>
+      <p>The idea came from a simple frustration &mdash; I have multiple pets (and foster cats), and getting a single usable photo is surprisingly difficult. Most shots fail not because of camera quality, but because the subject isn&rsquo;t looking at the right moment.</p>
+      <p>I built Lookio as a product exploration around timing, attention, and improving real-world outcomes through small but intentional interactions.</p>
+      <hr class="ux-section-divider">
+
+      <h2>What I Focused On</h2>
+      <p>The goal wasn&rsquo;t just to take photos &mdash; it was to increase the likelihood of getting a <em>good</em> one.</p>
+      <p>I focused on designing an experience that guides the user toward better outcomes without adding complexity.</p>
+      <p><strong>Key areas:</strong></p>
+      <ul>
+        <li>Designing around real-world behavior (movement, unpredictability, short attention spans)</li>
+        <li>Timing-based interaction (sound &rarr; attention &rarr; capture)</li>
+        <li>Reducing friction in the capture flow</li>
+        <li>Creating a simple, opinionated user experience</li>
+      </ul>
+
+      <figure class="ux-figure-mobile--small">
+        <img src="../img/portfolio/Lookio_Camera.png" alt="Lookio camera screen showing the primary capture interface.">
+      </figure>
+      <hr class="ux-section-divider">
+
+      <h2>Product Thinking</h2>
+      <p>A key insight was that most photos fail due to timing and attention &mdash; not camera quality.</p>
+      <p>Lookio addresses this by introducing a lightweight interaction just before capture, improving the odds of a successful shot without requiring user effort.</p>
+      <ul>
+        <li>Uses sound cues to draw attention naturally</li>
+        <li>Supports burst capture to increase success rate</li>
+        <li>Prioritizes simplicity over feature overload</li>
+        <li>Explores automatic photo selection based on quality signals</li>
+      </ul>
+      <blockquote>
+        <p><strong>Tradeoff</strong><br>I deliberately avoided adding filters or editing tools. The core bet is that timing matters more than post-processing &mdash; if you get the right moment, you need less editing.</p>
+      </blockquote>
+      <hr class="ux-section-divider">
+
+      <h2>UX &amp; Design Decisions</h2>
+      <p>The interface is intentionally minimal, allowing the user to focus on the subject rather than the controls.</p>
+      <p>The experience is designed to feel fast, responsive, and unobtrusive.</p>
+      <ul>
+        <li>Minimal UI to reduce distraction during capture</li>
+        <li>Clear feedback after capture (review and selection)</li>
+        <li>Designed for one-handed, real-world use</li>
+        <li>Thoughtful defaults to avoid configuration overhead</li>
+      </ul>
+      <blockquote>
+        <p><strong>Example decision</strong><br>I added a configurable delay between the sound and the shutter.</p>
+        <p>Too fast, and the subject doesn&rsquo;t react.<br>Too slow, and the moment passes.</p>
+        <p>This small timing window ended up being one of the most important parts of the experience.</p>
+      </blockquote>
+
+      <figure class="ux-figure-mobile--small">
+        <img src="../img/portfolio/Lookio_Settings.png" alt="Lookio settings screen showing configurable timing and capture behavior.">
+      </figure>
+      <hr class="ux-section-divider">
+
+      <h2>Capture &amp; Review Flow</h2>
+      <p>Once a photo is taken, the experience shifts to quickly selecting the best result.</p>
+      <p>Burst capture increases the chances of success, while the review screen keeps the selection process fast and lightweight.</p>
+
+      <figure class="ux-figure-mobile--small">
+        <img src="../img/portfolio/Lookio_Review.png" alt="Lookio review flow showing burst photos and quick selection of the best shot.">
+      </figure>
+      <hr class="ux-section-divider">
+
+      <h2>Tech</h2>
+      <p>Built as a mobile application using React Native and Expo, with a focus on rapid iteration and experimentation.</p>
+      <blockquote>
+        <p><strong>Why this approach</strong><br>Using React Native + Expo allowed me to iterate quickly on interaction timing and UX decisions without heavy native overhead.</p>
+        <p>The product is still evolving, so speed of iteration mattered more than early optimization.</p>
+      </blockquote>
+      <hr class="ux-section-divider">
+
+      <h2>Result</h2>
+      <p>Lookio is an ongoing exploration of how small, well-timed interactions can improve real-world outcomes.</p>
+      <p>In practice, the timing between sound and capture turned out to be the most critical variable &mdash; getting that window right made the difference between a missed shot and a usable one.</p>
+      <p>This project reflects my interest in building products where UX, behavioral insight, and engineering decisions are tightly connected.</p>
+
+      <p class="ux-article-signature">&mdash;&nbsp;Dan Thoreson</p>
+    </article>
+  </main>
+  <script src="../js/ux-post-lightbox.js"></script>
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

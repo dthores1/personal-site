@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Wordsmith is a fast-paced word game built around speed, feedback, and flow.">
+  <meta name="robots" content="index,follow">
+  <link rel="shortcut icon" href="../img/dt-favicon.svg">
+  <title>Wordsmith · Portfolio · Dan Thoreson</title>
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="../css/resume.min.css" rel="stylesheet">
+  <link href="../css/ux-post.min.css" rel="stylesheet">
+</head>
+<body id="page-top" class="ux-post-page">
+  <portfolio-post-nav></portfolio-post-nav>
+  <script src="../js/portfolio-post-nav.js"></script>
+  <main class="ux-post-main">
+    <article class="ux-article">
+      <h1>Wordsmith</h1>
+      <p class="ux-article-punch">A fast-paced word game built around speed, feedback, and flow.</p>
+
+      <div class="portfolio-actions" style="margin: 1.25rem 0 0;">
+        <a class="portfolio-btn portfolio-btn--primary" href="https://wordsmith.danthoreson.com" target="_blank" rel="noopener noreferrer">Play Wordsmith <span aria-hidden="true">&rarr;</span></a>
+      </div>
+
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/Wordsmith_Gameplay.png" alt="Wordsmith gameplay showing the letter tiles, score, and active round UI.">
+      </figure>
+
+      <h2>Overview</h2>
+      <p>Wordsmith is a real-time word game where players form as many words as possible from a set of letters within 60 seconds.</p>
+      <p>I designed and built the experience end-to-end, with a focus on responsiveness, interaction design, and creating a satisfying gameplay loop through immediate visual feedback.</p>
+
+      <h2>What I Focused On</h2>
+      <p>This project was less about features and more about feel.</p>
+      <p>I focused on building a tight interaction loop where every action &mdash; typing, submitting, scoring &mdash; produces immediate, meaningful feedback.</p>
+      <p><strong>Key areas:</strong></p>
+      <ul>
+        <li>Real-time input and validation with instant feedback</li>
+        <li>Micro-interactions (score animations, shuffle motion, error states)</li>
+        <li>Designing for speed and low cognitive load</li>
+        <li>Creating a cohesive UI system across multiple game states</li>
+      </ul>
+
+      <h2>Interaction &amp; UX Decisions</h2>
+      <p>The core challenge was designing an interface that stays out of the way while still providing constant feedback.</p>
+      <p>The input field remains the primary focus at all times, while supporting elements like score, timer, and found words are visible but secondary.</p>
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/Wordsmith_Landing_Page.png" alt="Wordsmith landing page showing the WORDS letter tiles on a dark background.">
+      </figure>
+      <ul>
+        <li>Reduced friction by eliminating unnecessary penalties and interruptions</li>
+        <li>Prioritized keyboard-first interaction for fast input</li>
+        <li>Designed subtle but consistent feedback for success, errors, and progress</li>
+        <li>Added urgency through timer behavior and visual changes near the end of a round</li>
+      </ul>
+
+      <h2>System &amp; Architecture</h2>
+      <p>The game is built as a lightweight web app with a simple backend for leaderboard persistence.</p>
+      <p>I focused on keeping the system responsive and predictable, especially under rapid user input.</p>
+      <p><strong>Design Note:</strong> Keeping validation client-side and deploying as a single service allowed the game to remain extremely responsive while running on minimal infrastructure.</p>
+      <ul class="padding-top--small">
+        <li><strong>Front-end:</strong> React 19 (Vite, Tailwind CSS)</li>
+        <li><strong>Back-end:</strong> Flask + Gunicorn, SQLite (leaderboard storage)</li>
+        <li><strong>Infrastructure:</strong> Fly.io (Docker, persistent volume), custom domain at wordsmith.danthoreson.com</li>
+      </ul>
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/Wordsmith_Scorecard.png" alt="Wordsmith leaderboard screen showing scores and rankings.">
+      </figure>
+
+      <h2>Result</h2>
+      <p>The final product is a fast, replayable experience that emphasizes responsiveness and clarity over complexity.</p>
+      <p>This project reflects my interest in building products where UX, interaction design, and engineering are tightly connected.</p>
+
+      <p class="ux-article-signature">&mdash;&nbsp;Dan Thoreson</p>
+    </article>
+  </main>
+  <script src="../js/ux-post-lightbox.js"></script>
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
