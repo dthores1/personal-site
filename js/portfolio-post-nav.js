@@ -6,7 +6,7 @@ class PortfolioPostNav extends HTMLElement {
               <span class="ux-post-nav-brand-arrow" aria-hidden="true">←</span>
               <span class="ux-post-nav-brand-name">Portfolio</span>
             </a>
-            <a class="ux-post-nav-link ux-post-nav-link--home" href="../index.html">Dan Thoreson</a>
+            <a class="ux-post-nav-link ux-post-nav-link--home" href="../index.html" data-track-event="return_to_home">Dan Thoreson</a>
           </nav>
         `;
   }

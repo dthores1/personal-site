@@ -43,6 +43,14 @@
     previousActive = document.activeElement;
     enlarged.src = thumb.currentSrc || thumb.src;
     enlarged.alt = thumb.alt || "";
+    // Only fire article_image_click on UX article pages — case studies use
+    // <portfolio-post-nav> and aren't part of the article tracking surface.
+    if (
+      typeof window.trackEvent === "function" &&
+      document.querySelector("ux-post-nav")
+    ) {
+      window.trackEvent("article_image_click");
+    }
     document.body.style.overflow = "hidden";
     root.setAttribute("aria-hidden", "false");
     if (!root.parentNode) {

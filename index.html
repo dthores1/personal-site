@@ -26,6 +26,8 @@
 
   <link href="css/resume.min.css" rel="stylesheet">
 
+  <script src="js/analytics.js"></script>
+
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -55,28 +57,28 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          <a class="nav-link js-scroll-trigger" href="#about" data-track-event="navigation_click" data-track-tab-name="About">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+          <a class="nav-link js-scroll-trigger" href="#portfolio" data-track-event="navigation_click" data-track-tab-name="Portfolio">Portfolio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+          <a class="nav-link js-scroll-trigger" href="#experience" data-track-event="navigation_click" data-track-tab-name="Experience">Experience</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#ux-thinking">UX Thinking</a>
+          <a class="nav-link js-scroll-trigger" href="#ux-thinking" data-track-event="navigation_click" data-track-tab-name="UX Thinking">UX Thinking</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+          <a class="nav-link js-scroll-trigger" href="#education" data-track-event="navigation_click" data-track-tab-name="Education">Education</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#professional-development">Professional Development</a>
+          <a class="nav-link js-scroll-trigger" href="#professional-development" data-track-event="navigation_click" data-track-tab-name="Professional Development">Professional Development</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+          <a class="nav-link js-scroll-trigger" href="#skills" data-track-event="navigation_click" data-track-tab-name="Skills">Skills</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
+          <a class="nav-link js-scroll-trigger" href="#interests" data-track-event="navigation_click" data-track-tab-name="Interests">Interests</a>
         </li>
       </ul>
     </div>
@@ -143,8 +145,8 @@
               </div>
 
               <div class="portfolio-actions">
-                <a class="portfolio-btn portfolio-btn--primary" href="https://wordsmith.danthoreson.com" target="_blank" rel="noopener noreferrer">Play Wordsmith <span aria-hidden="true">&rarr;</span></a>
-                <a class="portfolio-btn portfolio-btn--link" href="portfolio/wordsmith.html">View Case Study <span aria-hidden="true">&rarr;</span></a>
+                <a class="portfolio-btn portfolio-btn--primary" href="https://wordsmith.danthoreson.com" target="_blank" rel="noopener noreferrer" data-track-event="open_portfolio_app" data-track-portfolio-app-name="wordsmith">Play Wordsmith <span aria-hidden="true">&rarr;</span></a>
+                <a class="portfolio-btn portfolio-btn--link" href="portfolio/wordsmith.html" data-track-event="open_case_study" data-track-case-study-name="wordsmith">View Case Study <span aria-hidden="true">&rarr;</span></a>
               </div>
             </div>
 
@@ -172,7 +174,7 @@
               </div>
 
               <div class="portfolio-actions">
-                <a class="portfolio-btn portfolio-btn--primary" href="portfolio/lookio.html">View Case Study <span aria-hidden="true">&rarr;</span></a>
+                <a class="portfolio-btn portfolio-btn--primary" href="portfolio/lookio.html" data-track-event="open_case_study" data-track-case-study-name="lookio">View Case Study <span aria-hidden="true">&rarr;</span></a>
               </div>
 
               <!-- TODO - Add this once Lookio is live on App Store... -->
@@ -283,25 +285,25 @@
         <h2>UX Thinking</h2>
         <p class="ux-thinking-intro">A curated collection of how I think about design, interfaces, and the craft of building for people.</p>
 
-        <a class="ux-thinking-preview" href="ux/less-is-more.html">
+        <a class="ux-thinking-preview" href="ux/less-is-more.html" data-track-event="open_article" data-track-article-name="less-is-more">
           <h3 class="ux-thinking-preview-title">More Data Doesn’t Help Users — It Hurts Them</h3>
           <p class="ux-thinking-preview-text">Dashboards keep getting more metrics, tables keep getting more columns, and users keep getting more confused. The best interfaces aren't comprehensive — they're decisive.</p>
           <span class="ux-thinking-read-more">Continue<span class="ux-thinking-read-more-arrow" aria-hidden="true"> &rarr;</span></span>
         </a>
 
-        <a class="ux-thinking-preview" href="ux/bad-design.html">
+        <a class="ux-thinking-preview" href="ux/bad-design.html" data-track-event="open_article" data-track-article-name="bad-design">
           <h3 class="ux-thinking-preview-title">Bad Design Has Real Consequences</h3>
           <p class="ux-thinking-preview-text">Sometimes a misaligned label is only annoying. Sometimes poor mapping changes outcomes &mdash; as the 2000 butterfly ballot showed &mdash; when thousands of voters’ selections didn’t match their intent.</p>
           <span class="ux-thinking-read-more">Continue<span class="ux-thinking-read-more-arrow" aria-hidden="true"> &rarr;</span></span>
         </a>
 
-        <a class="ux-thinking-preview" href="ux/user-needs.html">
+        <a class="ux-thinking-preview" href="ux/user-needs.html" data-track-event="open_article" data-track-article-name="user-needs">
           <h3 class="ux-thinking-preview-title">Stop Building at the Top of the Pyramid</h3>
           <p class="ux-thinking-preview-text">Companies love shipping flashy features users never asked for while ignoring the fundamentals: reliability, usability, and trust. Great products earn innovation by first getting the basics right.</p>
           <span class="ux-thinking-read-more">Continue<span class="ux-thinking-read-more-arrow" aria-hidden="true"> &rarr;</span></span>
         </a>
 
-        <a class="ux-thinking-preview" href="ux/developer-tools.html">
+        <a class="ux-thinking-preview" href="ux/developer-tools.html" data-track-event="open_article" data-track-article-name="developer-tools">
           <h3 class="ux-thinking-preview-title">Why Developer Tools Have Terrible UX</h3>
           <p class="ux-thinking-preview-text">Most dev tools are built by engineers, for engineers —&nbsp;and it shows. The assumption that technical users don't need good UX has led to decades of unnecessarily complex interfaces that slow teams down.</p>
           <span class="ux-thinking-read-more">Continue<span class="ux-thinking-read-more-arrow" aria-hidden="true"> &rarr;</span></span>
@@ -473,6 +475,12 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/resume.min.js"></script>
+
+  <script>
+    if (typeof window.trackEvent === "function") {
+      window.trackEvent("site_opened");
+    }
+  </script>
 
 </body>
 
