@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="TravelOS is a travel-day command center where users can manage their entire trip itinerary, from flight booking and hotel reservation to ground transportation and dining options — all in one place.">
+  <meta name="robots" content="index,follow">
+  <link rel="shortcut icon" href="../img/dt-favicon.svg">
+  <title>TravelOS · Portfolio · Dan Thoreson</title>
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="../css/resume.min.css" rel="stylesheet">
+  <link href="../css/ux-post.min.css" rel="stylesheet">
+  <script src="../js/analytics.js"></script>
+</head>
+<body id="page-top" class="ux-post-page">
+  <portfolio-post-nav></portfolio-post-nav>
+  <script src="../js/portfolio-post-nav.js"></script>
+  <main class="ux-post-main">
+    <article class="ux-article ux-article--lookio">
+      <h1>TravelOS</h1>
+      <p class="ux-article-punch">A travel-day command center that turns airports, hotels, and rideshares into a single, calm timeline.</p>
+      <blockquote>
+        <p>Travel stress usually comes from <em>coordination failure</em>, not transportation itself.</p>
+      </blockquote>
+
+      <div class="portfolio-actions" style="margin: 1.25rem 0 0;">
+        <a class="portfolio-btn portfolio-btn--primary" href="https://travelos.danthoreson.com" target="_blank" rel="noopener noreferrer" data-track-event="open_portfolio_app" data-track-portfolio-app-name="travelos">Try TravelOS <span aria-hidden="true">&rarr;</span></a>
+      </div>
+
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/travelos-confirmation-screen.png" alt="TravelOS confirmation screen showing a successful flight booking and transportation recommendations.">
+      </figure>
+
+      <h2>Overview</h2>
+      <p>The core insight behind TravelOS was simple: travel stress usually comes from coordination failure, not transportation itself.</p>
+      <p>A typical traveler manually synchronizes airline apps, rideshare apps, hotel apps, transit apps, maps, weather, and terminal information across a constantly changing timeline.</p>
+      <p>When one thing changes &mdash; a delay, traffic, a gate assignment, a baggage delay &mdash; every dependent plan becomes stale at the same time.</p>
+      <p>TravelOS was designed to reduce that cognitive overhead through:</p>
+      <ul>
+        <li>Centralized orchestration</li>
+        <li>Timeline-based UX</li>
+        <li>Adaptive transportation</li>
+        <li>Contextual recommendations</li>
+        <li>Disruption-aware interfaces</li>
+      </ul>
+      <hr class="ux-section-divider">
+
+      <h2>What I Focused On</h2>
+      <p>This project focused less on booking mechanics and more on operational clarity.</p>
+      <p>The primary design goal was to <strong>reduce travel-day uncertainty through coordinated next-best-action design</strong>.</p>
+      <p>Instead of building isolated booking flows, I focused on:</p>
+      <ul>
+        <li>Timeline coherence</li>
+        <li>Adaptive state changes</li>
+        <li>Progressive disclosure</li>
+        <li>Calm information density</li>
+        <li>Disruption recovery</li>
+        <li>Minimizing app-switching</li>
+      </ul>
+      <p><strong>Key areas:</strong></p>
+      <ul>
+        <li>Designing a timeline-driven travel-day interface</li>
+        <li>Creating &ldquo;next-best-action&rdquo; dashboard patterns</li>
+        <li>Building disruption-aware UX states</li>
+        <li>Coordinating dependent transportation events</li>
+        <li>Designing adaptive transport recommendations</li>
+        <li>Creating a calm editorial visual system for operational data</li>
+      </ul>
+
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/travelos-itinerary-delayed.png" alt="TravelOS itinerary screen showing a delayed flight and updated transportation recommendations.">
+      </figure>      
+      <hr class="ux-section-divider">
+
+      <h2>Product &amp; UX Decisions</h2>
+
+      <h3>Timeline as the primary interaction model</h3>
+      <p>Most travel products organize information by provider &mdash; airline, hotel, rideshare, transit.</p>
+      <p>TravelOS instead organizes around <strong>sequence and dependency</strong>.</p>
+      <p>The timeline became the backbone of the entire product because it matches the traveler&rsquo;s mental model:</p>
+      <blockquote>
+        <p>&ldquo;First I do this, then I do this.&rdquo;</p>
+      </blockquote>
+      <p>This allowed:</p>
+      <ul>
+        <li>Delays to cascade naturally</li>
+        <li>Dependent events to recompute visually</li>
+        <li>Transportation coordination to feel understandable</li>
+        <li>Disruptions to become legible instead of chaotic</li>
+      </ul>
+
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/travelos-trip-support-1.png" alt="TravelOS itinerary screen showing a delayed flight and updated transportation recommendations.">
+      </figure>
+
+      <h3>&ldquo;Up Next&rdquo; as the anchor surface</h3>
+      <p>The active trip dashboard intentionally prioritizes a single primary action at all times.</p>
+      <p>Instead of presenting dozens of competing cards and notifications, the interface continuously answers:</p>
+      <blockquote>
+        <p>&ldquo;What should I do <em>right now</em>?&rdquo;</p>
+      </blockquote>
+      <p>Examples:</p>
+      <ul>
+        <li>Leave for ORD</li>
+        <li>Proceed to baggage claim</li>
+        <li>Board Blue Line train</li>
+        <li>Confirm rideshare pickup</li>
+        <li>Security wait times increasing</li>
+      </ul>
+      <p>Reducing ambiguity was a core product principle throughout the project.</p>
+
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/travelos-flight.png" alt="TravelOS itinerary screen showing a delayed flight and updated transportation recommendations.">
+      </figure>
+
+      <h3>Adaptive transportation logic</h3>
+      <p>One of the highest-impact product decisions was treating transportation as <strong>dependent events instead of fixed schedules</strong>.</p>
+      <p>Traditional rideshare booking assumes a fixed pickup time, a predictable arrival, and no upstream disruption.</p>
+      <p>TravelOS instead models:</p>
+      <ul>
+        <li>Deplaning time</li>
+        <li>Customs</li>
+        <li>Baggage claim</li>
+        <li>Airport congestion</li>
+        <li>Traffic conditions</li>
+      </ul>
+      <p>&hellip;as inputs that dynamically influence transportation recommendations.</p>
+      <p>The product continuously re-evaluates:</p>
+      <ul>
+        <li>Rideshare vs transit</li>
+        <li>Pickup timing</li>
+        <li>Delay recovery options</li>
+        <li>Routing suggestions</li>
+      </ul>
+      <p>&hellip;based on live trip state.</p>
+
+      <h3>Disruptions as first-class UX states</h3>
+      <p>Most travel apps treat delays as small alerts layered on top of otherwise static interfaces.</p>
+      <p>TravelOS instead treats disruptions as <strong>primary interaction states</strong>.</p>
+      <p>When a delay occurs:</p>
+      <ul>
+        <li>The timeline re-times dependent events</li>
+        <li>Transportation recommendations change</li>
+        <li>Support surfaces update</li>
+        <li>Contextual suggestions reshuffle</li>
+        <li>Opportunities emerge (&ldquo;You now have time for dinner&rdquo;)</li>
+      </ul>
+      <p>The goal was creating an interface that remains calm and coherent even when plans change.</p>
+
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/travelos-ground-transport.png" alt="TravelOS itinerary screen showing a delayed flight and updated transportation recommendations.">
+      </figure>
+      <hr class="ux-section-divider">
+
+      <h2>Visual &amp; Interaction Design</h2>
+      <p>The visual system intentionally avoids typical travel-startup aesthetics:</p>
+      <ul>
+        <li>Bright gradients</li>
+        <li>Overly playful illustration systems</li>
+        <li>Excessive card density</li>
+        <li>&ldquo;AI assistant&rdquo; UI patterns</li>
+      </ul>
+      <p>Instead, the interface uses:</p>
+      <ul>
+        <li>Warm neutral backgrounds</li>
+        <li>Restrained teal accents</li>
+        <li>Editorial typography</li>
+        <li>Large serif time displays</li>
+        <li>Sparse layouts with intentional hierarchy</li>
+      </ul>
+      <p>The goal was making operational information feel:</p>
+      <ul>
+        <li>Calm</li>
+        <li>Trustworthy</li>
+        <li>Readable</li>
+        <li>Premium</li>
+        <li>Low-stress</li>
+      </ul>
+
+      <h3>Interaction principles</h3>
+      <ul>
+        <li>Motion reserved for meaningful state changes</li>
+        <li>Progressive disclosure for dense operational data</li>
+        <li>Minimal visual noise</li>
+        <li>Consistent spatial relationships</li>
+        <li>Reduced cognitive switching costs</li>
+      </ul>
+
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/travelos-landing.png" alt="TravelOS itinerary screen showing a delayed flight and updated transportation recommendations.">
+      </figure>
+      <hr class="ux-section-divider">
+
+      <h2>System Thinking</h2>
+      <p>Although TravelOS is currently a frontend concept prototype, the project was intentionally designed around realistic operational constraints.</p>
+      <p>The product assumes integration with:</p>
+      <ul>
+        <li>Airline status APIs</li>
+        <li>Rideshare systems</li>
+        <li>Transit systems</li>
+        <li>Mapping services</li>
+        <li>Hotel inventory systems</li>
+        <li>Weather feeds</li>
+      </ul>
+      <p>The primary technical challenge is not booking itself: <strong>it&rsquo;s dependency orchestration</strong>.</p>
+      <p>For example:</p>
+      <ul>
+        <li>A delayed flight impacts baggage timing</li>
+        <li>Baggage timing impacts rideshare scheduling</li>
+        <li>Rideshare timing impacts hotel arrival</li>
+        <li>Transit conditions may become preferable mid-trip</li>
+      </ul>
+      <p>Designing those dependencies &mdash; and presenting them coherently &mdash; became the core systems challenge.</p>
+      <hr class="ux-section-divider">
+
+      <h2>Trade-offs</h2>
+      <p>This portfolio version intentionally uses:</p>
+      <ul>
+        <li>Curated demo trips</li>
+        <li>Simulated disruptions</li>
+        <li>Constrained booking paths</li>
+      </ul>
+      <p>&hellip;instead of fully dynamic search and inventory systems.</p>
+      <p>The goal was prioritizing:</p>
+      <ul>
+        <li>Interaction quality</li>
+        <li>State transitions</li>
+        <li>UX clarity</li>
+        <li>Operational storytelling</li>
+      </ul>
+      <p>&hellip;over backend completeness.</p>
+      <blockquote>
+        <p><strong>Why this approach</strong><br>A smaller number of highly-polished scenarios created a stronger demonstration of the product philosophy than a generic open-ended booking flow.</p>
+      </blockquote>
+      <hr class="ux-section-divider">
+
+      <h2>Result</h2>
+      <p>TravelOS became an exploration of how operational complexity can be transformed into calm, understandable experiences through product design and systems thinking.</p>
+      <p>The project reflects my interest in building products where:</p>
+      <ul>
+        <li>UX</li>
+        <li>Frontend engineering</li>
+        <li>Workflow design</li>
+        <li>Operational systems</li>
+        <li>Interaction architecture</li>
+      </ul>
+      <p>&hellip;all reinforce each other instead of existing separately.</p>
+
+      <p class="ux-article-signature">&mdash;&nbsp;Dan Thoreson</p>
+    </article>
+  </main>
+  <script src="../js/ux-post-lightbox.js"></script>
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
