@@ -180,6 +180,17 @@ body.ux-post-page {
   margin-top: var(--ux-space-sm);
 }
 
+/* Trailing line that continues a preceding list (e.g. an "...as inputs" coda).
+   Hugs the list above and pushes more space below to separate from the next group. */
+.ux-article ul:has(+ p.ux-article-list-trailing) {
+  margin-bottom: 4px;
+}
+
+.ux-article p.ux-article-list-trailing {
+  margin-top: 0;
+  margin-bottom: var(--ux-space-punch-y);
+}
+
 .ux-article p.ux-article-punch {
   margin-top: var(--ux-space-md);
   margin-bottom: var(--ux-space-punch-y);
