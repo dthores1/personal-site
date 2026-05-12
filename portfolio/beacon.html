@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Beacon is a smart home operating system designed around reliability, visibility, and recovery — not just device control.">
+  <meta name="robots" content="index,follow">
+  <link rel="shortcut icon" href="../img/dt-favicon.svg">
+  <title>Beacon · Portfolio · Dan Thoreson</title>
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="../css/resume.min.css" rel="stylesheet">
+  <link href="../css/ux-post.min.css" rel="stylesheet">
+  <script src="../js/analytics.js"></script>
+</head>
+<body id="page-top" class="ux-post-page">
+  <portfolio-post-nav></portfolio-post-nav>
+  <script src="../js/portfolio-post-nav.js"></script>
+  <main class="ux-post-main">
+    <article class="ux-article ux-article--lookio">
+      <h1>Beacon</h1>
+      <p class="ux-article-punch">A smart home operating system designed around reliability, visibility, and recovery &mdash; not just device control.</p>
+      <blockquote>
+        <p>Most smart home apps fail at the moment you need them most: <em>when your network changes</em>.</p>
+      </blockquote>
+
+      <div class="portfolio-actions" style="margin: 1.25rem 0 0;">
+        <a class="portfolio-btn portfolio-btn--primary" href="https://beacon.danthoreson.com" target="_blank" rel="noopener noreferrer" data-track-event="open_portfolio_app" data-track-portfolio-app-name="beacon">Try Beacon <span aria-hidden="true">&rarr;</span></a>
+      </div>
+
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/beacon-recovery-mode.png" alt="Beacon Recovery Center showing an active incident, recovery plan, and live progress log.">
+      </figure>
+
+      <h2>Overview</h2>
+      <p>The core insight behind Beacon was personal: after my ISP technician visited a few times, the network got reset &mdash; and I spent the rest of the evening individually re-pairing 15 Ring cameras, Alexas, smart TVs, and a Google Home through their respective apps. Each one took five minutes of fumbling through different setup flows. None of the apps acknowledged that this was happening across my whole house. None of them could fix it in bulk.</p>
+      <p>The smart home category is dominated by:</p>
+      <ul>
+        <li><strong>Alexa-style ecosystems</strong> &mdash; voice-first, but operationally opaque</li>
+        <li><strong>HomeKit-style controllers</strong> &mdash; minimal, but blind to network state</li>
+        <li><strong>Ring-style silos</strong> &mdash; great cameras, but isolated</li>
+        <li><strong>SmartThings-style platforms</strong> &mdash; powerful, but overwhelming</li>
+      </ul>
+      <p>Beacon answers a different question:</p>
+      <blockquote>
+        <p><em>&ldquo;What is actually happening in my home right now, and can I trust it?&rdquo;</em></p>
+      </blockquote>
+      <p>It is built around four pillars:</p>
+      <ul>
+        <li><strong>Home Overview</strong> &mdash; a single, calm view of system state</li>
+        <li><strong>Device Health &amp; Recovery</strong> &mdash; guided, bulk recovery from network changes</li>
+        <li><strong>Security &amp; Trust</strong> &mdash; operational home security, separated from account security</li>
+        <li><strong>Core Device Interactions</strong> &mdash; focused live views and settings, not endless feature creep</li>
+      </ul>
+
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/beacon-security-center.png" alt="Beacon's Security Center showing device management in a unified control panel.">
+      </figure>
+      
+      <hr class="ux-section-divider">
+
+      <h2>What I Focused On</h2>
+      <p>This project focused less on device-by-device feature parity and more on <strong>operational coherence</strong> across the whole home.</p>
+      <p>The primary design goal was to make smart home infrastructure feel <strong>legible, trustworthy, and recoverable</strong> &mdash; even when (especially when) something goes wrong.</p>
+      <p><strong>Key areas:</strong></p>
+      <ul>
+        <li>Designing a network ops-style dashboard adapted for a domestic context</li>
+        <li>Reframing recovery as a workflow rather than a diagnostic</li>
+        <li>Creating dependency-aware UX for failures that cascade</li>
+        <li>Designing a placement validation flow for new device setup</li>
+        <li>Separating operational security (cameras, alarms, modes) from account security (sharing, sessions)</li>
+        <li>Maintaining a calm, mature visual system that resists the &ldquo;gamer dashboard&rdquo; aesthetic common in this space</li>
+      </ul>
+      <hr class="ux-section-divider">
+
+      <h2>Product &amp; UX Decisions</h2>
+
+      <h3>Operational thesis, not device thesis</h3>
+      <p>Most smart home apps organize information by device. Beacon organizes by <strong>system state</strong>.</p>
+      <p>The Home Overview leads with two paired vital signs &mdash; <strong>Home Health</strong> (is the infrastructure working?) and <strong>Home Status</strong> (is the home secure?) &mdash; followed by a Quick Status Grid of operational metrics: cameras online, doors locked, Wi-Fi strength, automations running, last sync time.</p>
+      <p>This was deliberate. The user&rsquo;s first question on opening the app is rarely &ldquo;what color is my smart bulb?&rdquo; It&rsquo;s &ldquo;is everything OK?&rdquo; &mdash; and the app should answer that in one glance.</p>
+
+      <h3>Recovery Center as the differentiator</h3>
+      <p>The original frustration that prompted this project &mdash; re-pairing 15 devices after a network reset &mdash; became Beacon&rsquo;s signature feature.</p>
+      <p>The first version of the Recovery Center I designed was, in hindsight, a diagnostic dashboard. It showed a dependency graph and an empty queue. It was visually correct but emotionally inert.</p>
+      <p>The breakthrough was reframing recovery as a <strong>workflow</strong> rather than a view. The current design opens with an incident header that names the problem (&ldquo;Likely mesh node failure&rdquo;), states severity, affected count, <strong>recovery confidence (94%)</strong>, estimated time, and a recommended next step. The main panel is a four-step Recovery Plan that runs sequentially with live state per step. A console-style activity log streams progress on the side.</p>
+      <p>When recovery completes, the summary is honest: &ldquo;3 recovered cleanly, 1 after retry, 1 automation needs review.&rdquo; Most apps would say &ldquo;Done!&rdquo; &mdash; Beacon tells the truth, because trust is the product.</p>
+      <p>The dependency graph still exists, but it&rsquo;s been demoted to a collapsible &ldquo;Technical details&rdquo; panel. Useful, but not the centerpiece.</p>
+
+      <h3>Dependency awareness</h3>
+      <p>When devices fail, they often fail in patterns. A mesh node goes down, and four dependent cameras drop with it.</p>
+      <p>Beacon&rsquo;s Recovery Center is built to surface this causality explicitly:</p>
+      <blockquote>
+        <p>&ldquo;Hallway Camera unreachable because Mesh Node Upstairs is offline.&rdquo;</p>
+      </blockquote>
+      <p>Other apps make the user piece this together themselves across 15 disconnect notifications. Beacon groups them, names the root cause, and resolves them in the correct order.</p>
+
+      <h3>Placement Validation in the Add Device flow</h3>
+      <p>The Add Device flow has a step that &mdash; as far as I can tell &mdash; no consumer smart home app currently has: <strong>Placement Validation</strong>.</p>
+      <p>After Beacon connects to a new device, it runs a diagnostic from the device&rsquo;s current location and gives a verdict:</p>
+      <blockquote>
+        <p>&ldquo;Signal is acceptable, but could be better. Current signal is -72&nbsp;dBm (Weak). Moving 6&ndash;10 feet closer to Mesh Node Upstairs would improve reliability and reduce dropouts.&rdquo;</p>
+      </blockquote>
+      <p>The flow shows signal, latency, and mesh coverage measurements, and recommends a room based on signal-pattern matching with neighboring devices.</p>
+      <p>This step exists because the most common reason a smart device &ldquo;doesn&rsquo;t work right&rdquo; is poor placement &mdash; but the user only finds out weeks later, after the camera has been dropping clips for a month. Beacon catches it before the device is even mounted.</p>
+
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/beacon-add-device-1.png" alt="Add Device flow step 1 — selecting a device type to pair.">
+      </figure>
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/beacon-add-device-2.png" alt="Add Device flow step 2 — connecting to the new device.">
+      </figure>
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/beacon-add-device-3.png" alt="Add Device flow step 3 — Placement Validation runs signal, latency, and mesh coverage diagnostics from the device's current location.">
+      </figure>
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/beacon-add-device-4.png" alt="Add Device flow step 4 — room recommendation based on signal-pattern matching with neighboring devices.">
+      </figure>
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/beacon-add-device-5.png" alt="Add Device flow step 5 — confirmation that the device has been added to the home with a verified placement.">
+      </figure>
+
+      <h3>Live state on the Overview</h3>
+      <p>Early versions of Beacon felt accurate but cold &mdash; like a server status page. The home wasn&rsquo;t <em>alive</em> in it.</p>
+      <p>Adding a Live Activity feed alongside Critical Alerts &mdash; &ldquo;Motion detected 12s ago,&rdquo; &ldquo;Sarah arrived home,&rdquo; &ldquo;Front Door unlocked&rdquo; &mdash; gave the Overview an emotional pulse without sacrificing operational rigor. The home feels inhabited, not just monitored.</p>
+
+      <h3>Two layers of &ldquo;security&rdquo;</h3>
+      <p>Smart home security means two completely different things:</p>
+      <ul>
+        <li><strong>Operational home security</strong> &mdash; alarms, cameras, motion sensors, home modes (Home / Away / Night / Vacation)</li>
+        <li><strong>Account security</strong> &mdash; MFA, sessions, who has access, audit logs</li>
+      </ul>
+      <p>Most apps muddle these together. Beacon separates them deliberately:</p>
+      <ul>
+        <li><strong>Security Center</strong> owns the operational layer &mdash; modes, live cameras, sensors, emergency actions</li>
+        <li><strong>Sharing &amp; Access</strong> owns the account layer &mdash; household members with roles, active sessions, security events</li>
+      </ul>
+      <p>This was a small information-architecture decision with a big legibility benefit.</p>
+
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/beacon-sharing-security.png" alt="Beacon Sharing & Access screen showing household members with roles, active sessions, and security events.">
+      </figure>
+
+      <h3>Device view as a unified surface</h3>
+      <p>Clicking any device &mdash; from the Devices list, the Security Center&rsquo;s live cameras, or a notification &mdash; opens the same Device View. Three tabs: <strong>Live</strong>, <strong>Activity</strong>, <strong>Settings</strong>.</p>
+      <p>For cameras, the Live tab includes a simulated feed with REC/LIVE indicators, controls for mute, two-way talk, snapshot, and clip recording, plus a 24-hour Connectivity Timeline that visualizes online / unstable / offline states. When the device is offline, the Live tab shows a clear handoff to the Recovery Center instead of an empty black box.</p>
+      <p>Settings is grouped by concern &mdash; General, Notifications, Camera-specific (night vision, motion sensitivity), Sharing, Advanced &mdash; with destructive actions visually de-emphasized.</p>
+      <hr class="ux-section-divider">
+
+      <h2>Visual &amp; Interaction Design</h2>
+      <p>The visual system uses:</p>
+      <ul>
+        <li>A neutral slate base &mdash; most of the interface is unsaturated</li>
+        <li>Restrained emerald accents for active states and primary CTAs</li>
+        <li>A status palette of emerald / amber / rose, used sparingly and meaningfully</li>
+        <li>Inter typography with strong hierarchy and uppercase telemetric labels for sections</li>
+        <li>Monospaced fonts only where the content is genuinely system output (IPs, MAC addresses, log lines)</li>
+        <li>Solid colors throughout &mdash; <strong>no gradients</strong>, no skeuomorphic decoration</li>
+      </ul>
+      <p>The goal was making operational data feel:</p>
+      <ul>
+        <li>Calm</li>
+        <li>Mature</li>
+        <li>Trustworthy</li>
+        <li>High-density without being cramped</li>
+      </ul>
+
+      <h3>Interaction principles</h3>
+      <ul>
+        <li>Motion reserved for meaningful state changes (recovery progress, tab transitions, drawer reveals)</li>
+        <li>Hover states only on actionable elements &mdash; never on static info cards</li>
+        <li>Progressive disclosure for technical detail (the Recovery dependency graph is one toggle away, not in your face)</li>
+        <li>Operational truthfulness in copy &mdash; &ldquo;1 device needs attention&rdquo; instead of universal success messages</li>
+      </ul>
+
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/beacon-home.png" alt="Beacon's home screen showing a summary of the home's health and status, showcasing the visual design system.">
+      </figure>
+
+      <hr class="ux-section-divider">
+
+      <h2>System Thinking</h2>
+      <p>Beacon is currently a frontend concept prototype, but it was designed against realistic operational constraints. The product assumes integration with:</p>
+      <ul>
+        <li>Mesh router APIs (signal, topology, dependency)</li>
+        <li>Device manufacturer SDKs (Ring, Nest, Alexa, etc.)</li>
+        <li>Local network discovery (mDNS, SSDP)</li>
+        <li>Cloud auth providers (account security)</li>
+        <li>A pairing/onboarding protocol that supports placement diagnostics</li>
+      </ul>
+      <p>The hard problem isn&rsquo;t displaying status &mdash; it&rsquo;s modeling <strong>dependency and causality</strong> across heterogeneous devices and protocols. A camera dropping offline could mean many things: the device, its parent mesh node, the upstream ISP, an authentication failure, a firmware bug. Beacon&rsquo;s job is to triage that automatically and present the most likely cause first, with a recovery plan attached.</p>
+      <p>That triage layer &mdash; not the UI &mdash; is the real engineering challenge if this were built. The design is structured around its existence.</p>
+      <hr class="ux-section-divider">
+
+      <h2>Trade-offs</h2>
+      <p>This portfolio version intentionally uses:</p>
+      <ul>
+        <li>A curated mock dataset (~18 devices, one active incident, simulated recovery sequence)</li>
+        <li>Constrained flows rather than open-ended configuration</li>
+        <li>Simulated camera feeds and signal data</li>
+        <li>A pre-built recovery scenario rather than a real diagnostic engine</li>
+      </ul>
+      <p>The goal was prioritizing:</p>
+      <ul>
+        <li>Interaction quality and motion choreography</li>
+        <li>State transitions, especially in the Recovery Center</li>
+        <li>The Add Device placement validation flow</li>
+        <li>Operational storytelling</li>
+      </ul>
+      <p class="ux-article-list-trailing">&hellip;over backend completeness.</p>
+      <blockquote>
+        <p><strong>Why this approach</strong><br>A smaller set of highly-polished scenarios &mdash; a network change, a placement check, a guided recovery &mdash; created a stronger demonstration of Beacon&rsquo;s thesis than a generic &ldquo;control your bulbs&rdquo; demo would have.</p>
+      </blockquote>
+      <hr class="ux-section-divider">
+
+      <h2>Result</h2>
+      <p>Beacon became an exploration of how an industry stuck on device-level features could be reframed around <strong>system-level trust</strong>. The Recovery Center and Placement Validation flows in particular are the kinds of moments that justify the product&rsquo;s existence &mdash; they solve problems other smart home apps don&rsquo;t even acknowledge.</p>
+      <p>The project reflects my interest in building products where:</p>
+      <ul>
+        <li>UX</li>
+        <li>Frontend engineering</li>
+        <li>Systems thinking</li>
+        <li>Operational design</li>
+        <li>Information architecture</li>
+      </ul>
+      <p class="ux-article-list-trailing">&hellip;all reinforce each other instead of existing separately.</p>
+
+      <p class="ux-article-signature">&mdash;&nbsp;Dan Thoreson</p>
+    </article>
+  </main>
+  <script src="../js/ux-post-lightbox.js"></script>
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
