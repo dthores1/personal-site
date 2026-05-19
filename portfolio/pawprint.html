@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Pawprint is animal rescue operations software designed around real-world foster workflows.">
+  <meta name="robots" content="index,follow">
+  <link rel="shortcut icon" href="../img/dt-favicon.svg">
+  <title>Pawprint · Portfolio · Dan Thoreson</title>
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="../css/resume.min.css" rel="stylesheet">
+  <link href="../css/ux-post.min.css" rel="stylesheet">
+  <script src="../js/analytics.js"></script>
+</head>
+<body id="page-top" class="ux-post-page">
+  <portfolio-post-nav></portfolio-post-nav>
+  <script src="../js/portfolio-post-nav.js"></script>
+  <main class="ux-post-main">
+    <article class="ux-article ux-article--lookio">
+      <h1>Pawprint</h1>
+      <p class="ux-article-punch">Pawprint was designed around a simple observation: The hardest part of rescue work is often coordination, not compassion.</p>
+
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/Pawprint_Dashboard.png" alt="Pawprint's dashboard showing a summary of the organization's capacity and pending action items.">
+      </figure>
+
+      <h2>Overview</h2>
+      <p>Many foster-based rescues operate through a patchwork of Slack messages, spreadsheets, shared drives, text chains, and informal institutional knowledge. Critical workflows — foster placement, transportation, clinic planning, sitter coordination, supply requests, and medical tracking — are often fragmented across multiple tools with little operational visibility.</p>
+      <p>Pawprint explores how thoughtful workflow design and systems-oriented UX can reduce that coordination burden without losing the flexibility and humanity rescue work requires.</p>
+      <p>Instead of forcing rigid enterprise-style processes, the product was intentionally designed around the messy, real-world realities of foster operations:</p>
+
+      <ul>
+        <li>animals changing foster homes</li>
+        <li>emergency transport coordination</li>
+        <li>weekly clinic scheduling</li>
+        <li>temporary foster coverage</li>
+        <li>multi-animal placements</li>
+        <li>rapidly changing medical states</li>
+        <li>volunteer-driven communication</li>
+      </ul>
+
+      <p>The goal was building software that feels operationally powerful while remaining calm, flexible, and humane.</p>
+      
+      <hr class="ux-section-divider">
+
+      <h2>What I Focused On</h2>
+      <p>This project focused less on basic record management and more on operational coordination.</p>
+      <p>The primary design goal was to reduce organizational overhead for foster-based rescues without making the workflows feel rigid, bureaucratic, or overly &ldquo;enterprise.&rdquo;</p>
+      <p>Instead of treating the system as a collection of disconnected CRUD screens, I focused on:</p>
+      <ul>
+        <li>Operational clarity</li>
+        <li>Timeline-driven workflows</li>
+        <li>Humane data modeling</li>
+        <li>Flexible placement management</li>
+        <li>Cross-functional coordination</li>
+        <li>Volunteer usability</li>
+        <li>Reducing communication fragmentation</li>
+      </ul>
+      <p>A major challenge was balancing structure with flexibility.</p>
+      <p>Real rescue operations are dynamic:</p>
+      <ul>
+        <li>animals move between foster homes</li>
+        <li>clinic schedules shift</li>
+        <li>transportation logistics change daily</li>
+        <li>volunteers temporarily cover placements</li>
+        <li>supply requests often support multiple animals simultaneously</li>
+      </ul>
+      <p>The system needed to support those realities without forcing users through rigid administrative processes.</p>
+
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/Pawprint_Animal_Lite.png" alt="The Animal page, showing a clear view of the pet's intake details, medical history, placement status, and other key information.">
+      </figure>
+
+      <p><strong>Key areas:</strong></p>
+      <ul>
+        <li>Designing placement and foster workflows around real rescue operations</li>
+        <li>Creating timeline-based operational visibility</li>
+        <li>Building flexible request systems for supplies, transportation, and sitter coverage</li>
+        <li>Modeling foster placement history without creating administrative friction</li>
+        <li>Designing calm interfaces for high-context operational work</li>
+        <li>Reducing Slack- and spreadsheet-driven coordination overhead</li>
+        <li>Creating scalable workflows without sacrificing usability</li>
+      </ul>
+      <hr class="ux-section-divider">
+
+      <h2>Product &amp; UX Decisions</h2>
+
+      <h3>Foster placements as first-class operational objects</h3>
+      <p>One of the most important architectural decisions was treating foster placements as distinct operational entities rather than simple fields attached to an animal record.</p>
+      <p>Animals frequently move between foster homes due to:</p>
+      <ul>
+        <li>medical needs</li>
+        <li>behavioral concerns</li>
+        <li>volunteer availability</li>
+        <li>emergency overflow</li>
+        <li>temporary sitter coverage</li>
+      </ul>
+      <p>Tracking placement history became operationally important for continuity, accountability, and historical context.</p>
+      <p>Instead of overwriting a single &ldquo;current foster&rdquo; field, the system models:</p>
+      <ul>
+        <li>active placements</li>
+        <li>historical placements</li>
+        <li>placement timelines</li>
+        <li>temporary coverage periods</li>
+        <li>reassignment events</li>
+      </ul>
+      <p>This allowed the UI to present foster history as a coherent operational timeline instead of disconnected administrative updates.</p>
+
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/Pawprint_Foster_History.png" alt="Each animals' foster history is presented as a timeline of placement events, showing the date of each placement, the foster, and the reason for the placement change.">
+      </figure>
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/Pawprint_Reassign_Foster.png" alt="Foster assignments can be easily modified or reassigned.">
+      </figure>
+
+      <h3>Designing for real rescue workflows instead of theoretical normalization</h3>
+      <p>A recurring product challenge was resisting the temptation to over-structure workflows in ways that looked clean technically but created friction operationally.</p>
+      <p>For example:</p>
+      <ul>
+        <li>supply requests are often for entire foster groups rather than individual animals</li>
+        <li>sitter requests may apply to multiple placements simultaneously</li>
+        <li>transportation requests may involve animals, supplies, or both</li>
+        <li>clinic coordination changes rapidly based on available slots and trapping outcomes</li>
+      </ul>
+      <p>In many cases, strict one-to-one relational modeling would have made the workflows slower and less humane to use.</p>
+      <p>The goal became:</p>
+      <blockquote>
+        <p>normalize where it helps the humans &mdash; not just where it helps the database.</p>
+      </blockquote>
+      <p>This philosophy heavily influenced:</p>
+      <ul>
+        <li>request design</li>
+        <li>placement workflows</li>
+        <li>timeline structures</li>
+        <li>multi-animal operational flows</li>
+        <li>flexible notes and coordination systems</li>
+      </ul>
+
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/Pawprint_Supply_Requests.png" alt="Supply Request forms, showing the ability to request supplies for a specific foster parent or animal.">
+      </figure>
+
+      <h3>Timeline-driven operational visibility</h3>
+      <p>The timeline became the backbone of the animal detail experience.</p>
+      <p>Rather than separating operational history across multiple disconnected tabs, the system organizes activity chronologically:</p>
+      <ul>
+        <li>intake</li>
+        <li>foster placement</li>
+        <li>medical updates</li>
+        <li>notes</li>
+        <li>clinic events</li>
+        <li>transportation activity</li>
+      </ul>
+      <p>This creates a clearer mental model for volunteers and coordinators:</p>
+      <blockquote>
+        <p>What happened to this animal, and what happens next?</p>
+      </blockquote>
+      <p>To reduce noise, the timeline supports filtered operational views:</p>
+      <ul>
+        <li>All Activity</li>
+        <li>Placements</li>
+        <li>Medical</li>
+        <li>Notes</li>
+      </ul>
+      <p>This preserves clarity while still allowing focused operational review.</p>
+
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/Pawprint_Medical_Timeline.png" alt="The timeline view, showing a chronological list of activities for an animal, including intake, foster placement, medical updates, notes, and clinic events.">
+      </figure>
+
+      <h3>Transportation and temporary coverage as coordinated workflows</h3>
+      <p>One of the biggest operational insights from real rescue organizations was how much coordination work happens outside formal systems.</p>
+      <p>Transportation requests and temporary foster coverage are often managed through:</p>
+      <ul>
+        <li>Slack messages</li>
+        <li>text chains</li>
+        <li>spreadsheets</li>
+        <li>informal volunteer memory</li>
+      </ul>
+      <p>Pawprint introduces structured coordination workflows while intentionally keeping them lightweight.</p>
+      <p>Examples include:</p>
+      <ul>
+        <li>requesting temporary sitter coverage</li>
+        <li>coordinating animal transport between fosters</li>
+        <li>requesting supply pickup assistance</li>
+        <li>tracking clinic transport dependencies</li>
+      </ul>
+      <p>The goal was reducing communication chaos without making volunteers feel like they were filing enterprise tickets.</p>
+
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/Pawprint_Sitting_Requests.png" alt="Sitting Requests allow fosters to request temporary coverage for their animals, ensuring continuity of care even when they are unavailable.">
+      </figure>
+
+      <h3>Clinic coordination as an operational system</h3>
+      <p>Clinic planning became one of the most systems-oriented areas of the project.</p>
+      <p>Trap-neuter-return (TNR) organizations frequently coordinate:</p>
+      <ul>
+        <li>limited clinic capacity</li>
+        <li>scheduled intake days</li>
+        <li>transport logistics</li>
+        <li>volunteer assignments</li>
+        <li>medical readiness</li>
+        <li>foster placement availability</li>
+      </ul>
+      <p>These workflows are often managed manually through spreadsheets and Slack coordination.</p>
+      <p>The clinic planning system explores:</p>
+      <ul>
+        <li>scheduled clinic events</li>
+        <li>slot management</li>
+        <li>animal assignment workflows</li>
+        <li>linked transport coordination</li>
+        <li>veterinarian and location tracking</li>
+        <li>operational readiness visibility</li>
+      </ul>
+      <p>Rather than treating clinics as isolated appointments, the system models them as operational coordination hubs.</p>
+
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/Pawprint_Clinic_View.png" alt="Clinic planning page, showing a view of the clinic's schedule, contacts, slot management, animal assignments, veterinarian and location tracking, and operational readiness visibility.">
+      </figure>
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/Pawprint_Clinics.png" alt="Clinic schedule page, showing a view of the upcoming clinic events.">
+      </figure>
+      <hr class="ux-section-divider">
+
+      <h2>Visual &amp; Interaction Design</h2>
+      <p>The visual system was intentionally designed to feel calm, trustworthy, and operationally clear.</p>
+      <p>Many operational tools become visually overwhelming because every workflow competes equally for attention.</p>
+      <p>Pawprint instead prioritizes:</p>
+      <ul>
+        <li>strong hierarchy</li>
+        <li>restrained color usage</li>
+        <li>soft surfaces</li>
+        <li>clear spacing systems</li>
+        <li>timeline continuity</li>
+        <li>lightweight status signaling</li>
+      </ul>
+      <p>The goal was making operational work feel approachable rather than administrative.</p>
+
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/Pawprint_Contacts.png" alt="Pawprint was designed with soft surfaces, clear spacing systems, and lightweight status signaling.">
+      </figure>
+
+      <h3>Interaction principles</h3>
+      <ul>
+        <li>Calm operational density</li>
+        <li>Minimal visual noise</li>
+        <li>Flexible workflows over rigid forms</li>
+        <li>Clear activity hierarchy</li>
+        <li>Progressive disclosure</li>
+        <li>Fast scanning for coordinators and volunteers</li>
+        <li>Reduced cognitive overhead during high-volume operational work</li>
+      </ul>
+
+      <figure class="ux-figure--medium">
+        <img src="../img/portfolio/Pawprint_Fosters.png" alt="Pawprint emphasizes intuitive, simple workflows over rigid forms.">
+      </figure>
+      <hr class="ux-section-divider">
+
+      <h2>Systems Thinking</h2>
+      <p>Although Pawprint is currently a front-end portfolio project, the system was intentionally designed around realistic operational architecture.</p>
+      <p>The platform assumes coordination across:</p>
+      <ul>
+        <li>foster placements</li>
+        <li>volunteer management</li>
+        <li>transportation logistics</li>
+        <li>medical workflows</li>
+        <li>clinic scheduling</li>
+        <li>supply coordination</li>
+        <li>operational timelines</li>
+      </ul>
+      <p>The primary systems challenge was not simply storing data correctly.</p>
+      <p>It was designing workflows that reflected how rescue organizations actually operate in practice.</p>
+      <p>For example:</p>
+      <ul>
+        <li>a clinic assignment may require transportation coordination</li>
+        <li>transportation availability impacts placement timing</li>
+        <li>sitter coverage may temporarily alter placement responsibility</li>
+        <li>supply requests often correlate with placement density</li>
+        <li>medical readiness influences adoption eligibility</li>
+      </ul>
+      <p>These operational dependencies shaped both the information architecture and the interaction design.</p>
+      <p>A core project goal was ensuring that:</p>
+      <blockquote>
+        <p>operational complexity becomes understandable instead of overwhelming.</p>
+      </blockquote>
+      <hr class="ux-section-divider">
+
+      <h2>Trade-offs</h2>
+      <p>This portfolio version intentionally prioritizes workflow quality and operational modeling over full production completeness.</p>
+      <p>The current implementation uses:</p>
+      <ul>
+        <li>curated operational scenarios</li>
+        <li>simplified backend assumptions</li>
+        <li>simulated rescue data</li>
+        <li>constrained workflow paths</li>
+      </ul>
+      <p>This allowed the project to focus on:</p>
+      <ul>
+        <li>interaction quality</li>
+        <li>operational clarity</li>
+        <li>state transitions</li>
+        <li>workflow coherence</li>
+        <li>systems-oriented UX</li>
+      </ul>
+      <p class="ux-article-list-trailing">&hellip;rather than generic administrative tooling.</p>
+      <blockquote>
+        <p><strong>Why this approach</strong><br>Building fewer workflows with stronger operational realism created a more meaningful exploration than attempting to build a generic all-purpose animal database.</p>
+        <p>The goal was demonstrating how thoughtful product design can improve real coordination-heavy operational environments.</p>
+      </blockquote>
+      <hr class="ux-section-divider">
+
+      <h2>Result</h2>
+      <p>Pawprint became an exploration of how operational systems can remain humane, flexible, and approachable even as organizational complexity grows.</p>
+      <p>The project reflects my interest in building products where:</p>
+      <ul>
+        <li>UX</li>
+        <li>frontend engineering</li>
+        <li>workflow design</li>
+        <li>operational systems</li>
+        <li>information architecture</li>
+        <li>state modeling</li>
+      </ul>
+      <p class="ux-article-list-trailing">&hellip;all reinforce each other instead of existing separately.</p>
+      <p>Rather than treating rescue work as a collection of forms and records, Pawprint approaches it as a living operational system centered around coordination, trust, and care.</p>
+
+      <p class="ux-article-signature">&mdash;&nbsp;Dan Thoreson</p>
+    </article>
+  </main>
+  <script src="../js/ux-post-lightbox.js"></script>
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
